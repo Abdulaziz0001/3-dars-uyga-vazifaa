@@ -262,9 +262,11 @@ Create Table attendance(
 	class_id int References class(id),
 	date Date Default Current_Date
 );
-
+-- 2-jadval nomi o'zgartilidi
+----------------------
 Alter Table attendance 
 Rename to attendance1;
+----------------------
 
 Insert Into attendance1(student_id, class_id) values
 ('5', '1'),
