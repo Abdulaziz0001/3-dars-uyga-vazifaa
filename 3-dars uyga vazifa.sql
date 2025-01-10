@@ -263,8 +263,10 @@ Create Table attendance(
 	date Date Default Current_Date
 );
 
+Alter Table attendance 
+Rename to attendance1;
 
-Insert Into attendance(student_id, class_id) values
+Insert Into attendance1(student_id, class_id) values
 ('5', '1'),
 ('6', '2'),
 ('5', '3'),
@@ -276,10 +278,10 @@ Select
 	student.first_name,
 	student.last_name,
 	class.name,
-	attendance.date
-From attendance
-Join student On attendance.student_id = student.id
-Join class On attendance.class_id = class.id;
+	attendance1.date
+From attendance1
+Join student On attendance1.student_id = student.id
+Join class On attendance1.class_id = class.id;
 
 
 
